@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="clickSound.js" defer></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="top-container">
+            <div class="logo-container">
+                <img src="media/ninja.png" height="100%" alt="">
+                    <div class="logo-name">NUMBER NINJA</div>
+                    <div class="digit-count-container">
+                        <span class="digit-count">16</span>
+                        <span>digits</span>
+                    </div>
+            </div>
+            
+            <div class="screen">
+                <div class="operators-container">
+                    <span id="plus">&plus;</span>
+                    <span id="minus">&minus;</span>
+                    <span id="mult">&times;</span>
+                    <span id="div">&divide;</span>
+                    <span id="perc">&percnt;</span>
+                    <span id="sqrt">&radic;</span>
+                </div>
+                <div class="result-container">
+                    <div class="equals-container">
+                        <span id="equals">&equals;</span>
+                    </div>
+                    <div class="operand-container">
+                        -1234567890.123456
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="keys-container">
+            <div>
+                <button type="button" id="AC">AC</button>
+                <button type="button" id="GT">GT</button>
+                <button type="button" id="perc">&percnt;</button>
+                <button type="button" id="sqrt">&Sqrt;</button>
+                <button type="button" id="div">&divide;</button>
+            </div>
+            <div>
+                <button type="button" id="clear">C</button>
+                <button type="button" id="7">7</button>
+                <button type="button" id="8">8</button>
+                <button type="button" id="9">9</button>
+                <button type="button" id="mult">&times;</button>
+            </div>
+            <div>
+                <button type="button" id="plus-minus">&pm;</button>
+                <button type="button" id="4">4</button>
+                <button type="button" id="5">5</button>
+                <button type="button" id="6">6</button>
+                <button type="button" id="minus">&minus;</button>
+            </div>
+            <div class="plus-container-row">
+                <div>
+                    <div>
+                        <button type="button" id="delete">&#9654;</button>
+                        <button type="button" id="1">1</button>
+                        <button type="button" id="2">2</button>
+                        <button type="button" id="3">3</button>
+                    </div>
+                    <div>
+                        <button type="button" id="0">0</button>
+                        <button type="button" id="00">00</button>
+                        <button type="button" id="dec">&dot;</button>
+                        <button type="button" id="equals">&equals;</button>
+                    </div>
+                </div>
+                <div class="plus-container">
+                    <button type="button" id="plus">&plus;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

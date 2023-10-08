@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'Digital';
+    src: url(media/digital-7-font/Digital7-rg1mL.ttf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100dvh;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.calculator {
+    box-sizing: border-box;
+    width: min(99dvw, 600px);
+    height: min(700px, 85dvh);
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgb(126,124,130);
+    background: linear-gradient(162deg, rgba(126,124,130,1) 32%, rgba(159,159,165,1) 62%, rgba(162,165,168,1) 100%);
+    overflow: hidden;
+}
+
+.top-container {
+    padding: 1rem;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: #272727;
+    overflow: hidden;
+}
+
+.logo-container {
+    height: 5rem;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    font-size: min(2rem, 5vw);
+    padding-bottom: 1rem;
+}
+
+.logo-container img {
+    filter: drop-shadow(2px 4px 6px black) brightness(10);
+}
+
+.digit-count-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.digit-count-container .digit-count {
+    margin: 0;
+    padding: 0;
+    font-size: min(4rem, 10vw);
+}
+
+.digit-count-container span {
+    font-size: 12px;
+    text-align: center;
+}
+
+.screen-container {
+    padding: 1rem;
+}
+
+.screen {
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem 1rem;
+    background-color: #b2c4b4;
+    font-family: 'Digital', monospace;
+}
+
+.operators-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    gap: 0.5rem;
+}
+
+.operators-container > *, .equals-container {
+    width: 1.5rem;
+    text-align: center;
+    background-color: #3b4443;
+    color: white;
+}
+
+.result-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.operand-container {
+    flex: 1;
+    text-align: end;
+    font-size: min(10vw, 4.2rem);
+}
+
+.keys-container {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
+.keys-container > div:not(.plus-container-row) {
+    flex: auto;
+    display: flex;
+    width: 100%;
+}
+
+.keys-container button {
+    flex: auto;
+    width: 100%;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: #191518;
+    border-radius: 10px;
+    color: #cccccc;
+    font-size: large;
+    border: 0px;
+    cursor: pointer;
+}
+
+.keys-container button:active {
+    transform: translate(-1%, -1%);
+    transform: translateZ(-1%);
+}
+
+.plus-container-row {
+    flex: auto;
+    display: flex;
+    width: 100%;
+    flex-grow: 2;
+
+}
+
+.plus-container-row > div:not(.plus-container){
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+}
+
+.plus-container-row > div:not(.plus-container) > div {
+    flex: auto;
+    display: flex;
+}
+
+.plus-container {
+    flex: auto;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+}
+
+.plus-container > button {
+    width: 100%;
+}
