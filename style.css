@@ -85,11 +85,12 @@ body {
     gap: 0.5rem;
 }
 
-.operators-container > *, .equals-container {
+.operators-container > * {
     width: 1.5rem;
     text-align: center;
     background-color: #3b4443;
     color: white;
+    visibility: hidden;
 }
 
 .result-container {
@@ -164,4 +165,8 @@ body {
 
 .plus-container > button {
     width: 100%;
+}
+
+.operand-container:empty:before{
+    content: "0";
 }
