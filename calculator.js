@@ -9,6 +9,36 @@ let operator, operand;
 // know if the operand has already been calculated
 let operandIsResult = false;
 
+
+const keyMaps = {
+    "+": "plus",
+    "-": "minus",
+    "*": "mult",
+    "/": "div",
+    "%": "perc",
+    "=": "equals",
+    ".": "dec",
+    "Backspace": "delete",
+    "Delete": "clear",
+    "Enter": "equals",
+    "Escape": "AC"
+}
+/**
+ * Map keys to calculator keys
+ */
+document.addEventListener('keydown', (e) => {
+    if (isNaN(+e.key) && keyMaps[e.key]) {
+        e.preventDefault();
+        document.querySelector(`#${keyMaps[e.key]}`).click();
+    }
+    // Whyn't querySelector?
+    // See: https://stackoverflow.com/questions/37270787/uncaught-syntaxerror-failed-to-execute-queryselector-on-document
+    else if (!isNaN(+e.key)) {
+        e.preventDefault();
+        document.getElementById(e.key).click();
+    }
+})
+
 /**
  * Play button sound
  * link buttons to specified functions
@@ -19,6 +49,8 @@ document.querySelector(".keys-container").addEventListener('click', (e) => {
         handleButtons(e.target);
     }
 });
+
+
 
 /**
  * 
